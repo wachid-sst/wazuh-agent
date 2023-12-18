@@ -13,8 +13,8 @@ services:
         - WAZUH-AGENT_VERSION=${WAZUH-AGENT_VERSION:-4.3.4}
         - WAZUH-AGENT_ARCH=${WAZUH-AGENT_ARCH:-amd64}
     restart: ${RESTART_MODE:-unless-stopped}
-    env_file:
-      - ./.env
+#    env_file:
+#      - ./.env
     environment:
       - JOIN_MANAGER=172.17.0.1 
       - JOIN_GROUPS=default,test
