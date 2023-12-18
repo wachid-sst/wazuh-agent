@@ -4,7 +4,7 @@ services:
   wazuh-agent:
     image: wazuh-agent:amd-${WAZUH-AGENT_VERSION:-4.3.4}
     container_name: ${WAZUH-AGENT_HOSTNAME:-wazuh-agent}
-    hostname: ${WAZUH-AGENT_HOSTNAME:-wazuh-agent}
+#    hostname: ${WAZUH-AGENT_HOSTNAME:-wazuh-agent}
     build:
       dockerfile: ./wazuh-agent/Dockerfile-${WAZUH-AGENT_ARCH:-amd64}
       tags:
@@ -17,7 +17,7 @@ services:
 #      - ./.env
     environment:
       - JOIN_MANAGER=172.17.0.1 
-      - JOIN_GROUPS=default,test
+      - JOIN_GROUPS="default,test"
       - JOIN_PASSWORD=test123
     network_mode: host
     volumes:
