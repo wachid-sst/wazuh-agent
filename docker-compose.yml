@@ -28,7 +28,7 @@ services:
        - /var/ossec/local_internal_options.conf:/var/ossec/etc/local_internal_options.conf
        - /var/ossec/client.keys:/var/ossec/etc/client.keys
       
-networks:
-  selkg-network:
+#networks:
+#  selkg-network:
 #    external: true
-    name: selkg-network
+#    name: selkg-network
